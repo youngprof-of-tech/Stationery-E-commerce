@@ -34,7 +34,7 @@ const Footer = () => {
               type='text'
               name='search'
               placeholder='Enter Your Email'
-              className='py-1.5 rounded-l shadow w-[20rem]'
+              className='py-1.5 rounded-l shadow w-full md:w-[20rem]'
             />
             <Button
               name='Subscribe'

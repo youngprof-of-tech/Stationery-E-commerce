@@ -35,7 +35,7 @@ const TopRated = () => {
     <div className='w-full md:w-[90%] mx-auto bg-[#F1F1F1] py-20 px-10 xl:px-20'>
       <header className='flex items-center justify-center'>
         <div className='flex items-center mx-auto gap-x-10 lg:mb-4'>
-          <h2 className='text-2xl md:text-3xl font-bold'>On Sale</h2>
+          <h2 className='hidden md:block text-2xl md:text-3xl font-bold'>On Sale</h2>
           <h3 className='text-2xl md:text-3xl font-bold text-[#A0A0A0]'>
             Top Rated
           </h3>
@@ -89,7 +89,7 @@ const TopRated = () => {
               );
             })}
           </div>
-          <div className='mt-10 xl:mt-16 w-full md:w-[90%] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-10 xl:gap-x-5 gap-y-8'>
+          <div className='mt-10 xl:mt-16 w-max md:w-[90%] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-10 xl:gap-x-5 gap-y-8'>
             {activeTab.content}
           </div>
         </div>

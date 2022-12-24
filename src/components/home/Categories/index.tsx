@@ -26,7 +26,7 @@ const Categories = () => {
         </p>
       </div>
 
-      <div className='mt-10 xl:mt-16 md:w-[90%] mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-y-6 justify-items-center xl:justify-items-start xl:flex justify-between'>
+      <div className='mt-10 xl:mt-16 w-max md:w-[90%] mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-y-6 justify-items-center xl:justify-items-start xl:flex justify-between'>
         {categories?.map((each) => {
           return (
             <div className='w-max h-max cursor-pointer'>
