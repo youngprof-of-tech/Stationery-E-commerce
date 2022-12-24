@@ -6,7 +6,7 @@ const CTA = () => {
       <img
         src={CTAImg}
         alt='Order now'
-        className='w-full h-[15rem] md:h-auto lg:h-[36rem] md:object-contain'
+        className='w-full md:h-auto lg:h-[36rem] md:object-contain'
       />
     </div>
   );
