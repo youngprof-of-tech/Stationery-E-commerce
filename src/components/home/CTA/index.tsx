@@ -2,11 +2,11 @@ import CTAImg from 'assets/images/CTA.png';
 
 const CTA = () => {
   return (
-    <div className='xl:mt-5 mx-auto w-[90%] rounded-3xl overflow-hidden'>
+    <div className='mt-4 sm:mt-0 xl:mt-5 mx-auto w-[90%] rounded-3xl overflow-hidden'>
       <img
         src={CTAImg}
         alt='Order now'
-        className='w-full h-[36rem] object-contain'
+        className='w-full h-[15rem] md:h-auto lg:h-[36rem] md:object-contain'
       />
     </div>
   );

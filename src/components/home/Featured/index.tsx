@@ -79,20 +79,35 @@ const tabs = [
 const Featured = () => {
   const [activeTab, setActiveTab] = useState(tabs[0]);
   return (
-    <div className='w-[90%] mx-auto py-20 px-10 xl:px-20'>
+    <div className='w-full md:w-[90%] mx-auto py-20 px-10 xl:px-20'>
       <header className='flex items-center justify-center'>
         <div className='flex items-center mx-auto gap-x-10'>
-          <h2 className='text-3xl mb-4 font-bold'>Featured Products</h2>
+          <h2 className='text-2xl md:text-3xl lg:mb-4 font-bold'>
+            Featured Products
+          </h2>
         </div>
       </header>
 
       <div>
         <div>
-          <div className='mt-1 xl:mt-4 flex items-center gap-x-4 justify-center'>
+          <div className='hidden mt-2 xl:mt-4 md:flex items-center gap-x-4 justify-center'>
+            {tabs?.slice(0, 3).map((each) => {
+              return (
+                <p
+                  className={`cursor-pointer md:block lg:hidden ${
+                    each === activeTab ? 'border-b border-b-primary' : ''
+                  }`}
+                  key={each.name}
+                  onClick={() => setActiveTab(each)}
+                >
+                  {each.name}
+                </p>
+              );
+            })}
             {tabs?.slice(0, 4).map((each) => {
               return (
                 <p
-                  className={`cursor-pointer block xl:hidden ${
+                  className={`cursor-pointer hidden lg:block xl:hidden ${
                     each === activeTab ? 'border-b border-b-primary' : ''
                   }`}
                   key={each.name}
@@ -116,17 +131,17 @@ const Featured = () => {
               );
             })}
           </div>
-          <div className='mt-10 xl:mt-16 w-[90%] mx-auto grid grid-cols-3 xl:grid-cols-4 gap-x-10 xl:gap-x-5 gap-y-8'>
+          <div className='mt-10 xl:mt-16 w-full md:w-[90%] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-10 xl:gap-x-5 gap-y-8'>
             {activeTab.content}
           </div>
         </div>
       </div>
 
-      <div className='mt-5'>
+      <div className='mt-5 hidden md:block'>
         <img
           src={Download}
           alt='Download'
-          className='object-contain w-[90%] h-auto mx-auto'
+          className='object-contain w-full lg:w-[90%] h-auto mx-auto'
         />
       </div>
     </div>

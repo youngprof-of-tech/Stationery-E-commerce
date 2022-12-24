@@ -1,3 +1,4 @@
+import React from 'react';
 import Package1 from 'assets/images/package__1.png';
 import Package2 from 'assets/images/package__2.png';
 import Package3 from 'assets/images/package__3.png';

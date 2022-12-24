@@ -18,9 +18,9 @@ const Footer = () => {
   return (
     <div className='bg-gradient-to-r from-[#0E556C] to-[#1A95BD]'>
       <div className='w-[90%] mx-auto pt-16'>
-        <div className='pb-16 flex items-center justify-between border-b-[.25px] border-b-white'>
+        <div className='pb-16 flex flex-col lg:flex-row lg:items-center justify-between border-b-[.25px] border-b-white'>
           <div>
-            <h3 className='text-white text-2xl font-bold mb-1'>
+            <h3 className='text-white text-xl md:text-2xl font-bold mb-1'>
               Subscribe to Our Newsletter
             </h3>
             <p className='text-white'>
@@ -29,7 +29,7 @@ const Footer = () => {
             </p>
           </div>
 
-          <div className='flex items-center'>
+          <div className='flex flex-col md:flex-row md:items-center mt-4 lg:mt-0'>
             <Input
               type='text'
               name='search'
@@ -42,7 +42,7 @@ const Footer = () => {
             />
           </div>
         </div>
-        <div className='my-20 grid grid-cols-3 gap-y-5 xl:flex justify-between'>
+        <div className='my-8 md:my-20 grid md:grid-cols-2 gap-x-10 lg:gap-x-0 lg:grid-cols-3 gap-y-5 xl:flex justify-between'>
           <div className='flex flex-col gap-y-2'>
             <img src={Logo} alt='Logo' className='w-10 h-10 mb-5' />
             <p className='text-white xl:w-[25rem]'>
@@ -99,7 +99,7 @@ const Footer = () => {
             <h4 className='text-white mb-8 font-semibold text-lg'>
               Our Products
             </h4>
-            <div className='grid grid-cols-3 gap-x-2 gap-y-3'>
+            <div className='grid grid-cols-3 lg:gap-x-2 gap-y-3'>
               <img
                 src={Product1}
                 alt='Product 1'

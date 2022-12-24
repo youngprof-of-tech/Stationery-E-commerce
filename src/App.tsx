@@ -9,7 +9,7 @@ import {
 
 function App() {
   return (
-    <div className='grid lg:gap-y-[4rem] xl:gap-y-[10rem] xl:max-w-[1600px] mx-auto'>
+    <div className='grid gap-y-[3rem] md:gap-y-[4rem] xl:gap-y-[10rem] xl:max-w-[1600px] mx-auto'>
       <div>
         <TopNav />
         <CTA />

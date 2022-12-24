@@ -32,25 +32,40 @@ const tabs = [
 const TopRated = () => {
   const [activeTab, setActiveTab] = useState(tabs[0]);
   return (
-    <div className='w-[90%] mx-auto bg-[#F1F1F1] py-20 px-10 xl:px-20'>
+    <div className='w-full md:w-[90%] mx-auto bg-[#F1F1F1] py-20 px-10 xl:px-20'>
       <header className='flex items-center justify-center'>
-        <div className='flex items-center mx-auto gap-x-10 mb-4'>
-          <h2 className='text-3xl font-bold'>On Sale</h2>
-          <h3 className='text-3xl font-bold text-[#A0A0A0]'>Top Rated</h3>
+        <div className='flex items-center mx-auto gap-x-10 lg:mb-4'>
+          <h2 className='text-2xl md:text-3xl font-bold'>On Sale</h2>
+          <h3 className='text-2xl md:text-3xl font-bold text-[#A0A0A0]'>
+            Top Rated
+          </h3>
         </div>
         <Button
           name='View All'
-          className='bg-transparent border border-light-blue text-light-blue rounded-full !w-max px-6 py-3'
+          className='bg-transparent border border-light-blue text-light-blue rounded-full !w-max px-6 py-3 hidden lg:block'
         />
       </header>
 
       <div>
         <div>
-          <div className='mt-1 xl:mt-4 flex items-center gap-x-4 justify-center'>
+          <div className='mt-2 xl:mt-4 flex items-center gap-x-4 justify-center'>
+            {tabs?.slice(0, 3).map((each) => {
+              return (
+                <p
+                  className={`cursor-pointer hidden md:block lg:hidden ${
+                    each === activeTab ? 'border-b border-b-primary' : ''
+                  }`}
+                  key={each.name}
+                  onClick={() => setActiveTab(each)}
+                >
+                  {each.name}
+                </p>
+              );
+            })}
             {tabs?.slice(0, 4).map((each) => {
               return (
                 <p
-                  className={`cursor-pointer block xl:hidden ${
+                  className={`cursor-pointer hidden lg:block xl:hidden ${
                     each === activeTab ? 'border-b border-b-primary' : ''
                   }`}
                   key={each.name}
@@ -74,7 +89,7 @@ const TopRated = () => {
               );
             })}
           </div>
-          <div className='mt-10 xl:mt-16 w-[90%] mx-auto grid grid-cols-3 xl:grid-cols-4 gap-x-10 xl:gap-x-5 gap-y-8'>
+          <div className='mt-10 xl:mt-16 w-full md:w-[90%] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-10 xl:gap-x-5 gap-y-8'>
             {activeTab.content}
           </div>
         </div>
