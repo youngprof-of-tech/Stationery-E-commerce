@@ -79,7 +79,7 @@ const tabs = [
 const Featured = () => {
   const [activeTab, setActiveTab] = useState(tabs[0]);
   return (
-    <div className='w-[90%] mx-auto py-20 px-20'>
+    <div className='w-[90%] mx-auto py-20 px-10 xl:px-20'>
       <header className='flex items-center justify-center'>
         <div className='flex items-center mx-auto gap-x-10'>
           <h2 className='text-3xl mb-4 font-bold'>Featured Products</h2>
@@ -88,11 +88,24 @@ const Featured = () => {
 
       <div>
         <div>
-          <div className='mt-4 flex items-center gap-x-4 justify-center'>
+          <div className='mt-1 xl:mt-4 flex items-center gap-x-4 justify-center'>
+            {tabs?.slice(0, 4).map((each) => {
+              return (
+                <p
+                  className={`cursor-pointer block xl:hidden ${
+                    each === activeTab ? 'border-b border-b-primary' : ''
+                  }`}
+                  key={each.name}
+                  onClick={() => setActiveTab(each)}
+                >
+                  {each.name}
+                </p>
+              );
+            })}
             {tabs?.map((each) => {
               return (
                 <p
-                  className={`cursor-pointer ${
+                  className={`cursor-pointer hidden xl:block ${
                     each === activeTab ? 'border-b border-b-primary' : ''
                   }`}
                   key={each.name}
@@ -103,14 +116,18 @@ const Featured = () => {
               );
             })}
           </div>
-          <div className='mt-16 w-[90%] mx-auto grid grid-cols-4 gap-x-5 gap-y-8'>
+          <div className='mt-10 xl:mt-16 w-[90%] mx-auto grid grid-cols-3 xl:grid-cols-4 gap-x-10 xl:gap-x-5 gap-y-8'>
             {activeTab.content}
           </div>
         </div>
       </div>
 
       <div className='mt-5'>
-        <img src={Download} alt='Download' className='object-cover h-auto' />
+        <img
+          src={Download}
+          alt='Download'
+          className='object-contain w-[90%] h-auto mx-auto'
+        />
       </div>
     </div>
   );

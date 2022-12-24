@@ -42,12 +42,14 @@ const TopNav = () => {
 
       <div className='bg-gray py-1 mt-7'>
         <div className='w-[90%] mx-auto flex items-center'>
-          <img src={Logo} alt='logo' className='w-[3.9rem] h-[3.9rem]' />
-          <div className='flex items-center justify-between ml-20'>
-            <span className='flex items-center gap-x-2 w-max'>
-              <img src={Location} alt='location' className='w-4 h-4' />
-              <p>Choose Your Location</p>
-            </span>
+          <div className='flex items-center lg:flex-col xl:flex-row'>
+            <img src={Logo} alt='logo' className='w-[3.9rem] h-[3.9rem]' />
+            <div className='flex items-center justify-between xl:ml-20'>
+              <span className='flex items-center gap-x-2 w-max'>
+                <img src={Location} alt='location' className='w-4 h-4' />
+                <p>Choose Your Location</p>
+              </span>
+            </div>
           </div>
 
           <div className='ml-20 flex justify-between items-center w-full'>
@@ -58,8 +60,10 @@ const TopNav = () => {
                 placeholder='Search'
                 label=''
                 className='!rounded-full overflow-hidden'
-                inputClass='w-[35rem] py-[.7rem] pr-6'
-                RightIcon={<img src={Search} alt='Search' className='w-4 h-4' />}
+                inputClass='lg:w-[70%] xl:w-[35rem] py-[.7rem] pr-6'
+                RightIcon={
+                  <img src={Search} alt='Search' className='w-4 h-4' />
+                }
               />
             </div>
             <div className='ml-auto flex items-center gap-x-5'>

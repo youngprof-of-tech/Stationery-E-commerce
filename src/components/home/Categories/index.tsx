@@ -19,14 +19,14 @@ const Categories = () => {
   return (
     <div className='w-[90%] mx-auto text-center'>
       <div>
-        <h2 className='text-3xl mb-4 font-bold'>Shop By Categories</h2>
-        <p className='text-secondary w-[30%] mx-auto'>
+        <h2 className='text-3xl mb-2 xl:mb-4 font-bold'>Shop By Categories</h2>
+        <p className='text-secondary w-[50%] xl:w-[30%] mx-auto'>
           Essential Office Supplies In Our Online Stationery Shop That Keep Your
           Office Operations Smooth And Efficient
         </p>
       </div>
 
-      <div className='mt-20 w-[90%] mx-auto flex justify-between'>
+      <div className='mt-10 xl:mt-16 w-[90%] mx-auto grid grid-cols-3 gap-y-6 justify-items-center xl:justify-items-start xl:flex justify-between'>
         {categories?.map((each) => {
           return (
             <div className='w-max h-max cursor-pointer'>
@@ -41,11 +41,11 @@ const Categories = () => {
         })}
       </div>
 
-      <div className='mt-32 w-[90%] mx-auto rounded-3xl overflow-hidden'>
+      <div className='mt-10 xl:mt-32 w-[90%] mx-auto rounded-3xl overflow-hidden'>
         <img
           src={Shop}
           alt='Shop'
-          className='w-full h-[36rem] object-cover'
+          className='w-full h-[36rem] object-contain'
         />
       </div>
     </div>

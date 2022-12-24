@@ -42,10 +42,10 @@ const Footer = () => {
             />
           </div>
         </div>
-        <div className='my-20 flex justify-between'>
+        <div className='my-20 grid grid-cols-3 gap-y-5 xl:flex justify-between'>
           <div className='flex flex-col gap-y-2'>
             <img src={Logo} alt='Logo' className='w-10 h-10 mb-5' />
-            <p className='text-white w-[25rem]'>
+            <p className='text-white xl:w-[25rem]'>
               It is a long established fact that a reader will be distracted by
               the readable content of a page when looking at its layout.
             </p>
@@ -65,7 +65,7 @@ const Footer = () => {
             </div>
           </div>
           <div>
-            <h4 className='text-white mb-8 font-semibold text-lg'>
+            <h4 className='text-white mb-3 xl:mb-8 font-semibold text-lg'>
               Useful Links
             </h4>
             <ul className='flex flex-col gap-y-2 font-medium'>
@@ -77,7 +77,7 @@ const Footer = () => {
             </ul>
           </div>
           <div>
-            <h4 className='text-white mb-8 font-semibold text-lg'>
+            <h4 className='text-white mb-3 xl:mb-8 font-semibold text-lg'>
               Contact Us
             </h4>
             <ul className='flex flex-col gap-y-2'>
